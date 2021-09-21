@@ -1,0 +1,80 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title"><span class="lstick"></span>Currency Sitis</h4>
+          <form [formGroup]="formData">
+          <div class="row">
+            <div class="col-lg-6">
+              <label class="control-label m-t-20" for="example-input1-group2"
+                >Value </label
+              >
+              <div class="input-group">
+                <span class="input-group-addon">$</span>
+                <input
+                  type="number"
+                  class="form-control"
+                  formControlName="firstvalue"
+                  aria-label="Text input with checkbox"
+                />
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label class="control-label m-t-20" for="example-input1-group2"
+                  >Currency</label
+                >
+                <select class="form-control" [disabled]="true">
+                  <option>EURO</option>
+                </select>
+              </div>
+            </div>
+           
+            <div class="col-lg-12">
+              <div class="form-group">
+                <label class="control-label m-t-20" for="example-input1-group2"
+                  >Currency Change</label>
+                <select class="form-control" formControlName="currencySelected">
+                  <option  *ngFor="let currency of currencysValues" [ngValue]="currency" >{{currency}}</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-lg-12">
+                  <div class="row form-material">
+                    <div class="col">
+                      <label class="m-t-20">Default Date Picker</label>
+                      <input
+                        type="date"
+                        id="date"
+                        name="date"
+                        [ngModel]="date | date: 'yyyy-MM-dd'"
+                        formControlName="date"
+                        class="form-control"
+                        [max]="date | date: 'yyyy-MM-dd'"
+                      />
+                    </div>
+                  </div>
+                </div>
+          </div>
+          </form>
+          <br><hr>
+          <p> Change Currency: <strong style="font-size: 200%;"> {{ precie }}</strong></p>
+          <hr>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex">
+            <h4 class="card-title">
+              <span class="lstick"></span>Graphic Currency
+            </h4>
+          </div>
+          <!-- space for graphic -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
