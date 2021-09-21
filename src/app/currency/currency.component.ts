@@ -42,7 +42,11 @@ export class CurrencyComponent implements OnInit {
 
   setValues(){
     this.formData.get('firstvalue')?.valueChanges.subscribe(resp =>  this.getCurrency())
-    this.formData.get('currencySelected')?.valueChanges.subscribe(resp =>  this.getCurrency())
+    this.formData.get('currencySelected')?.valueChanges.subscribe(resp =>  {
+      this.currencytem = this.formData.get('currencySelected')?.value
+      console.log(this.currencytem);
+      
+      this.getCurrency()})
     this.formData.get('date')?.valueChanges.subscribe(resp =>  this.getdateCurrency());
   }
 

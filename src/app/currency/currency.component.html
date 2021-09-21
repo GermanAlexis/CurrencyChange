@@ -59,7 +59,7 @@
           </div>
           </form>
           <br><hr>
-          <p> Change Currency: <strong style="font-size: 200%;"> {{ precie }}</strong></p>
+          <p> Change Currency: <strong style="font-size: 200%;"> {{ precie | currency: currencytem :'symbol-narrow' }}</strong></p>
           <hr>
         </div>
       </div>
@@ -69,10 +69,13 @@
         <div class="card-body">
           <div class="d-flex">
             <h4 class="card-title">
-              <span class="lstick"></span>Graphic Currency
+              <span class="lstick"></span>Grafic Currency
             </h4>
           </div>
-          <!-- space for graphic -->
+          <div
+            class="website-visitor p-relative m-t-30"
+            style="height: 400px; width: 100%"
+          ></div>
         </div>
       </div>
     </div>
